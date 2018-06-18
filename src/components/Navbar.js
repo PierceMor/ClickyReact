@@ -10,7 +10,7 @@ const Navbar = () => (
                 <a className="brand-logo center">Click a face to start!</a>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li>Score: </li>
-                        <li>Top Score: </li>
+                        <li>Top Score:  </li>
                     </ul>
                 </div>
             </nav>

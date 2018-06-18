@@ -25,7 +25,7 @@ let catimg = [
         name: "Cat 5"
     },    {
         id: 6,
-        src: "../img/cat6.jpg",
+        src: "./../img/cat6.jpg",
         name: "Cat 6"
     },    {
         id: 7,
@@ -45,28 +45,33 @@ let catimg = [
         name: "Cat 10"
     },    {
         id: 11,
-        src: "../img/cat11.jpg",
+        src: "img/cat11.jpg",
         name: "Cat 11"
     },    {
         id: 12,
-        src: "../img/cat12.jpg",
+        src: "img/cat12.jpg",
         name: "Cat 12"
     }
 ]
 
 
 
-class Gamehost extends Component {
+class Gamehost extends React.Component {
 
-    handleClick = (id) => {
-    
+    constructor(props) {
+        super(props)
+        this.state = {
+            lastClicked: false,
+            score: 0,
+            topscore: 0
+        }
     }
 
     render() {
         return (
-            <div className="card small">
+            <div id="catStuff" >
                 {catimg.map(image => 
-                <Cat 
+                <Cat
                     src={image.src}
                     alt={image.name}
                     id={image.id}
